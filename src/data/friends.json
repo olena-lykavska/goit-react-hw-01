@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Mango",
+    "avatar": "https://via.placeholder.com/48",
+    "isOnline": true
+  },
+  {
+    "id": 2,
+    "name": "Kiwi",
+    "avatar": "https://via.placeholder.com/48",
+    "isOnline": false
+  },
+  {
+    "id": 3,
+    "name": "Apple",
+    "avatar": "https://via.placeholder.com/48",
+    "isOnline": true
+  },
+  {
+    "id": 4,
+    "name": "Strawberry",
+    "avatar": "https://via.placeholder.com/48",
+    "isOnline": false
+  }
+]
