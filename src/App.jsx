@@ -2,6 +2,7 @@ import React from "react";
 import Profile from "./components/Profile/Profile";
 import FriendList from "./components/FriendList/FriendList";
 import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
+import './App.css'; // Підключаємо CSS
 
 import userData from "./data/userData.json"; // Дані для профілю користувача
 import friendsData from "./data/friends.json"; // Дані для списку друзів

@@ -2,29 +2,35 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./FriendList.module.css";
 
-// Компонент FriendList для відображення списку друзів
+// Компонент FriendList приймає масив friends через пропси
 const FriendList = ({ friends }) => {
   return (
     <ul className={styles.friendList}>
-      {/* Для кожного друга з масиву friends створюється елемент списку */}
-      {friends.map((friend) => (
-        <li key={friend.id} className={friend.isOnline ? styles.online : styles.offline}>
-          <img src={friend.avatar} alt={friend.name} className={styles.avatar} />
-          <p className={styles.name}>{friend.name}</p>
+      {/* Ітеруємо масив friends і створюємо елемент списку для кожного друга */}
+      {friends.map(({ avatar, name, isOnline, id }) => (
+        <li key={id} className={styles.friendItem}>
+          {/* Аватар друга */}
+          <img src={avatar} alt={`${name} avatar`} className={styles.avatar} />
+          {/* Ім'я друга */}
+          <p className={styles.name}>{name}</p>
+          {/* Статус друга: Online або Offline */}
+          <p className={isOnline ? styles.online : styles.offline}>
+            {isOnline ? "Online" : "Offline"}
+          </p>
         </li>
       ))}
     </ul>
   );
 };
 
-// Перевірка типів для пропсів
+// Валідація пропсів для безпечного використання компоненту
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      avatar: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      isOnline: PropTypes.bool.isRequired,
+      avatar: PropTypes.string.isRequired, // URL аватара друга
+      name: PropTypes.string.isRequired,  // Ім'я друга
+      isOnline: PropTypes.bool.isRequired, // Статус друга (true/false)
+      id: PropTypes.number.isRequired,    // Унікальний ID друга
     })
   ).isRequired,
 };

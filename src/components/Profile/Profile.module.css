@@ -1,56 +1,95 @@
 .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Центруємо всі елементи */
+    padding: 20px;
+    background-color: #fff;
+    /* Білий фон */
+    border-radius: 10px;
+    /* Закруглені кути */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Тінь */
     width: 300px;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Ширина профілю */
+    margin: auto;
+    /* Центруємо профіль */
+    border: 1px solid #333;
+    /* Легкий бордер */
+    margin-bottom: 20px;
 }
 
 .description {
     text-align: center;
-    padding: 20px;
 }
 
 .avatar {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    /* Розмір аватара */
+    height: 100px;
     border-radius: 50%;
-    margin-bottom: 16px;
+    /* Робимо аватар круглим */
+    object-fit: cover;
+    /* Запобігаємо спотворенню зображення */
+    margin-bottom: 20px;
 }
 
 .name {
     font-size: 24px;
-    font-weight: bold;
-    margin: 8px 0;
+    /* Розмір шрифту */
+    font-weight: 700;
+    /* Жирний шрифт */
+    color: #333;
+    /* Темний текст */
+    margin-bottom: 10px;
 }
 
-.tag {
-    font-size: 16px;
-    color: #888;
-    margin: 4px 0;
-}
-
+.tag,
 .location {
     font-size: 16px;
-    color: #555;
+    /* Розмір тексту */
+    color: #777;
+    /* Світло-сірий текст */
+    margin-bottom: 5px;
 }
 
 .stats {
     display: flex;
-    justify-content: space-around;
-    background-color: #eee;
-    padding: 10px 0;
-    margin: 0;
+    justify-content: space-between;
+    /* Розподіл елементів по ширині */
+    width: 100%;
+    /* Вся ширина контейнера */
+    margin-top: 20px;
+    padding: 0;
     list-style: none;
+    /* Прибираємо маркери списку */
+    border-top: 1px solid #ddd;
+    /* Лінія зверху */
 }
 
 .stats li {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* Елементи у колонку */
+    align-items: center;
+    /* Центруємо текст */
+    flex: 1;
+    /* Однакова ширина для кожного елемента */
+    padding: 10px 0;
 }
 
-.stats span {
-    display: block;
+.stats span:first-child {
     font-size: 14px;
+    /* Менший текст для заголовка */
+    color: #777;
+    /* Світло-сірий текст */
+}
+
+.stats span:last-child {
+    font-size: 18px;
+    /* Більший текст для значення */
+    font-weight: 700;
+    /* Жирний текст */
+    color: #333;
+    /* Темний текст */
 }

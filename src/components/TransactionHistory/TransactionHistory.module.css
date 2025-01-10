@@ -1,27 +1,54 @@
+/* Основний стиль таблиці */
 .transactionHistory {
     width: 600px;
+    /* Ширина таблиці */
     margin: 20px auto;
+    /* Центрування таблиці */
     border-collapse: collapse;
-    border: 1px solid #ddd;
+    /* Видалення проміжків між рамками */
     font-size: 16px;
+    /* Розмір тексту */
     text-align: center;
+    /* Вирівнювання тексту по центру */
 }
 
+/* Стиль заголовків таблиці */
 .transactionHistory thead {
-    background-color: #4caf50;
+    background-color: #000;
+    /* Чорний фон для заголовків */
     color: white;
+    /* Білий текст */
 }
 
+/* Стиль клітинок таблиці */
 .transactionHistory th,
 .transactionHistory td {
     padding: 10px;
+    /* Внутрішній відступ */
     border: 1px solid #ddd;
+    /* Рамка клітинок */
 }
 
+/* Стиль даних таблиці */
+.transactionHistory tbody td {
+    color: black;
+    /* Чорний текст для даних */
+}
+
+/* Чергування кольору рядків таблиці (світло-сірий для парних) */
 .transactionHistory tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #d3d3d3;
+    /* Світло-сірий фон */
 }
 
+/* Білий фон для непарних рядків */
+.transactionHistory tbody tr:nth-child(odd) {
+    background-color: white;
+    /* Білий фон */
+}
+
+/* Ефект виділення при наведенні мишкою */
 .transactionHistory tbody tr:hover {
     background-color: #f1f1f1;
+    /* Світло-сірий фон при наведенні */
 }

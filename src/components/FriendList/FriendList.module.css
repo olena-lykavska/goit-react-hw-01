@@ -1,40 +1,83 @@
+/* Список друзів */
 .friendList {
-    list-style: none;
-    padding: 0;
-    margin: 20px auto;
-    width: 300px;
-}
-
-.friendList li {
     display: flex;
+    /* Розташування в рядок */
+    gap: 20px;
+    /* Відступи між картками */
+    justify-content: center;
+    /* Вирівнювання по центру */
+    padding: 0;
+    /* Відсутність відступів */
+    list-style: none;
+    /* Видалення маркерів списку */
+    margin: 0;
+    /* Відсутність зовнішніх відступів */
+}
+
+/* Окрема картка друга */
+.friendItem {
+    display: flex;
+    /* Розташування елементів у колонку */
+    flex-direction: column;
+    /* Вертикальне вирівнювання */
     align-items: center;
-    padding: 10px 20px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    /* Центрування елементів */
+    width: 120px;
+    /* Ширина картки */
+    padding: 10px;
+    /* Внутрішній відступ */
+    border: 1px solid #000;
+    /* Чорна рамка */
+    border-radius: 10px;
+    /* Закруглені кути */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Тінь */
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Білий фон */
+    text-align: center;
+    /* Текст по центру */
 }
 
+/* Стиль аватару */
 .avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    margin-right: 16px;
+    width: 80px;
+    /* Ширина аватара */
+    height: 80px;
+    /* Висота аватара */
+    object-fit: cover;
+    /* Обрізка зображення */
+    margin-bottom: 10px;
+    /* Відступ знизу */
 }
 
+/* Стиль імені */
 .name {
     font-size: 18px;
-    font-weight: bold;
+    /* Розмір шрифту */
+    font-weight: 700;
+    /* Товщина шрифту */
     color: #333;
+    /* Темний колір */
+    margin-bottom: 5px;
+    /* Відступ знизу */
 }
 
+/* Стиль статусу Online */
 .online {
-    border-left: 5px solid #4caf50;
-    /* Зелена смужка для онлайн друзів */
+    color: green;
+    /* Зелений текст */
+    font-size: 16px;
+    /* Розмір шрифту */
+    font-weight: 500;
+    /* Товщина шрифту */
 }
 
+/* Стиль статусу Offline */
 .offline {
-    border-left: 5px solid #f44336;
-    /* Червона смужка для офлайн друзів */
+    color: red;
+    /* Червоний текст */
+    font-size: 16px;
+    /* Розмір шрифту */
+    font-weight: 500;
+    /* Товщина шрифту */
 }

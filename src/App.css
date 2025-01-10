@@ -5,6 +5,25 @@
   text-align: center;
 }
 
+/* Центрування контейнера по екрану */
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  /* Центрування по вертикалі */
+  justify-content: center;
+  /* Центрування по горизонталі */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /* Всі компоненти в стовпчик */
+  align-items: center;
+  /* Центрування компонентів усередині контейнера */
+  gap: 20px;
+  /* Відступи між компонентами */
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -40,3 +59,4 @@
 .read-the-docs {
   color: #888;
 }
+
