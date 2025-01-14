@@ -1,0 +1,61 @@
+.friendItem {
+    display: flex;
+    flex-direction: column;
+    /* Вертикальне вирівнювання елементів */
+    align-items: center;
+    /* Центрування елементів */
+    width: 120px;
+    /* Ширина картки */
+    padding: 10px;
+    /* Внутрішній відступ */
+    border: 1px solid #000;
+    /* Чорна рамка */
+    border-radius: 10px;
+    /* Закруглені кути */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Тінь */
+    background-color: #fff;
+    /* Білий фон */
+    text-align: center;
+    /* Текст по центру */
+}
+
+.avatar {
+    width: 80px;
+    /* Ширина аватара */
+    height: 80px;
+    /* Висота аватара */
+    object-fit: cover;
+    /* Зображення зберігає пропорції */
+    margin-bottom: 10px;
+    /* Відступ знизу */
+}
+
+.name {
+    font-size: 18px;
+    /* Розмір шрифту */
+    font-weight: 700;
+    /* Товщина шрифту */
+    color: #333;
+    /* Темний колір тексту */
+    margin-bottom: 5px;
+    /* Відступ знизу */
+}
+
+.online {
+    color: green;
+    /* Зелений текст для статусу Online */
+    font-size: 16px;
+    /* Розмір шрифту */
+    font-weight: 500;
+    /* Товщина шрифту */
+}
+
+.offline {
+    color: red;
+    /* Червоний текст для статусу Offline */
+    font-size: 16px;
+    /* Розмір шрифту */
+    font-weight: 500;
+    /* Товщина шрифту */
+}
